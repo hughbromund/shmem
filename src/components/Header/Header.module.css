@@ -1,0 +1,12 @@
+.Logo {
+   height: 64px; 
+}
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--foreground-color);
+    border-radius: var(--border-radius);
+    height: 64px;
+}

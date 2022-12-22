@@ -1,11 +1,9 @@
-import React from 'react';
-import './App.css';
-import Home from "./Components/Home/Home"
+import Header from "./components/Header/Header.tsx";
 
 function App() {
   return (
-    <div >
-      <Home />
+    <div>
+      <Header />
     </div>
   );
 }
