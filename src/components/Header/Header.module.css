@@ -8,5 +8,82 @@
     width: 100%;
     background-color: var(--foreground-color);
     border-radius: var(--border-radius);
-    height: 64px;
+    height: 80px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+}
+.inner {
+    float: left;
+}
+.title {
+    font-size: x-large;
+    display: inline-block;
+    /* width: 100%; */
+}
+/* .project {
+    width:0%;
+    overflow:hidden;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+} */
+  
+.container {
+    position: relative;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    font-size: x-large;
+}
+
+.add {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: #2794A5;
+    height: 100%;
+    /* width: 2.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.project {
+    position: relative;
+    z-index: 1;
+    animation: slideOut 1s;
+    animation-timing-function: cubic-bezier(0, 0.67, 1, 0.3);
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+.visible {
+    animation: slideIn 1.5s;
+    animation-timing-function: cubic-bezier(0, 0.67, 1, 0.3);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+        display: inline-block;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+        display: none;
+    }
 }

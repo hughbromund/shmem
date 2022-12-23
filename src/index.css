@@ -29,6 +29,8 @@
     --warning-color: #ffb74d;
   
     --default-transition: 0.5s;
+
+    font-family: "Unbounded", sans-serif;
   
     /* background-color: var(--background-color);
     color: var(--text-primary); */
