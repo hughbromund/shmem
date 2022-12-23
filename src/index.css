@@ -13,13 +13,21 @@
     --default-margin: 15px;
     --default-column-width: 30rem;
   
-    --primary-color: #0050dd;
-    --secondary-color: #1d6efc;
-    --gradient: linear-gradient(
+
+
+
+    /* Project Specific Colors */
+    --dubbclub-primary-color: #0050dd;
+    --dubbclub-secondary-color: #1d6efc;
+    --dubbclub-gradient: linear-gradient(
       90deg,
       rgba(68, 136, 255, 1) 0%,
       rgba(1, 47, 120, 1) 100%
     );
+
+    --finex-green: #34c759;
+    --marketgobrr-blue: #1155cc;
+    --justifi-blue: #13283C;
 
 
     --dark-green: #4B8063;
@@ -29,6 +37,8 @@
     --warning-color: #ffb74d;
   
     --default-transition: 0.5s;
+
+    --header-height: 80px;
 
     font-family: "Unbounded", sans-serif;
   

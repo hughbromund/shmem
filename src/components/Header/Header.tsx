@@ -1,20 +1,16 @@
 import React, { Component } from "react";
-import { ReactComponent as Logo } from "../../assets/Logo.svg";
+import { ReactComponent as ShmemLogo } from "../../assets/ShmemLogo.svg";
+import { Project } from "../Core/Core.tsx";
 
-import classes from "./Header.module.css";
+import styles from "./Header.module.css";
 
 var classNames = require("classnames");
 
-enum Project {
-  DubbClub = "DubbClub",
-  Finex = "Finex",
-}
-
-type Props = {};
-
-type State = {
-  currentProject: Project | null;
+type Props = {
+  selectedProject: Project | null;
 };
+
+type State = {};
 
 export default class Header extends Component<Props, State> {
   state = {
@@ -23,52 +19,31 @@ export default class Header extends Component<Props, State> {
 
   render() {
     return (
-      <div className={classes.wrapper}>
-        <div className={classes.inner}>
-          <Logo className={classes.Logo} />
+      <div className={styles.wrapper}>
+        <div className={styles.inner}>
+          <ShmemLogo className={styles.Logo} />
         </div>
-        <div className={classes.container}>
+        <div className={styles.container}>
           <span
-            className={classNames(classes.project, {
-              [classes.visible]: this.state.currentProject === Project.DubbClub,
+            className={classNames(styles.project, {
+              [styles.visible]: this.props.selectedProject === Project.DubbClub,
             })}
           >
             DubbClub.
           </span>
 
-          {/* <span
-            className={classNames(classes.project, {
-              [classes.visible]: this.state.currentProject === Project.Finex,
+          <span
+            className={classNames(styles.project, {
+              [styles.visible]: this.props.selectedProject === Project.Finex,
             })}
           >
             finex.
-          </span> */}
+          </span>
 
           <span>
             <strong>shmem.io</strong>
           </span>
         </div>
-        <button
-          onClick={() => {
-            this.setState({ currentProject: Project.DubbClub });
-          }}
-        >
-          Dubb Club
-        </button>
-        <button
-          onClick={() => {
-            this.setState({ currentProject: Project.Finex });
-          }}
-        >
-          FINEX
-        </button>
-        <button
-          onClick={() => {
-            this.setState({ currentProject: null });
-          }}
-        >
-          Clear
-        </button>
       </div>
     );
   }

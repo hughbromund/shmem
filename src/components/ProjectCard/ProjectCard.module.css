@@ -1,0 +1,6 @@
+.card {
+    /* background-color: red; */
+    border-radius: var(--border-radius);
+    padding: var(--default-padding);
+    display: grid;
+}

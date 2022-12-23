@@ -1,9 +1,9 @@
-import Header from "./components/Header/Header.tsx";
+import Core from "./components/Core/Core.tsx";
 
 function App() {
   return (
     <div>
-      <Header />
+      <Core />
     </div>
   );
 }
